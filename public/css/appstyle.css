@@ -1,0 +1,75 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+/*
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #8B687F;
+    color: #c6ca53;
+}
+ */
+
+.footer {
+    background-color: #8B687F;
+    color: #c6ca53;
+}
+
+
+.bg-navbar {
+    background-color: #539987 !important;
+}
+
+/*
+.fg-navbar {
+    color: #c6ca53;
+}
+
+.fg-navbar a, a:visited {
+    color: white;
+}
+  */
+
+.bg-form {
+    background-color: #8aea92;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+    padding: 60px 15px 0;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+/*
+.bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
+.bottom_ul li { float:left; line-height:40px;}
+.bottom_ul li:after { content:"/"; color:#c6ca53; margin-right:8px; margin-left:8px;}
+.bottom_ul li a { color:#c6ca53;  font-size:12px;}
+
+
+a:visited {
+    text-decoration: underline;
+    color: #007bff;
+}
+*/
