@@ -1,29 +1,21 @@
 <div class="container">
+    <h1>Have an account already? Sign in</h1>
 
-    <div class="row">
-        <div class="col">
-            <h2 class="mt-0">Have an account already? Sign in</h2>
+    <form action="/teachers/signin" method="POST">
+        <div>
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
-    </div>
+        <div>
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
 
-    <div class="card">
-        <div class="card-body bg-form">
-            <form action="/teachers/signin" method="POST">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <div class="form-group">
-                    <a href="/teachers/signin/forgotten-password">Forgotten your password?</a>
-                </div>
-            </form>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div>
+            <a href="/teachers/signin/forgotten-password">Forgotten your password?</a>
         </div>
-    </div>
+    </form>
 
 </div>
