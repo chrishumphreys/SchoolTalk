@@ -1,0 +1,11 @@
+{
+  "about": {
+    "page_title": "About SchoolTalk",
+    "description_text": "SchoolTalk is a free to use service dedicated to helping parents and children to talk together about their school work.",
+    "parents_link_text": "For parents",
+    "teachers_link_text": "For teachers",
+    "parents_link": "/parents",
+    "teachers_link": "/teachers",
+    "image_link": "/images/parents-smaller.jpg"
+  }
+}

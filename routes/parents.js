@@ -1,17 +1,19 @@
 var express = require('express');
 var router = express.Router();
+var  globals = require('../properties/globals.json');
 
 var serviceTier = require('../service-tier');
 
 
 
 router.get('/', function(req, res, next) {
-  res.render('parents', { });
+  res.render('parents', {globals: globals});
 });
 
 router.get('/schools', function(req, res, next) {
     var pageData =  {
-      schools : serviceTier.getAllSchools()
+      globals: globals,
+      schools: serviceTier.getAllSchools()
     };
     console.log(JSON.stringify(pageData));
     res.render('parents-schools', pageData);
@@ -20,7 +22,8 @@ router.get('/schools', function(req, res, next) {
 router.get('/schools/:schoolId/classes', function(req, res, next) {
     var schoolId = req.params.schoolId;
     var pageData =  {
-        classes : serviceTier.getClassesForSchool(schoolId)
+        globals: globals,
+        classes: serviceTier.getClassesForSchool(schoolId)
     };
     console.log("Classes for school: " + schoolId);
     console.log(JSON.stringify(pageData));
@@ -32,7 +35,8 @@ router.get('/schools/:schoolId/classes/:classId/subscribe', function(req, res, n
     var schoolId = req.params.schoolId;
     var classId = req.params.classId;
     var pageData =  {
-        schoolClass : serviceTier.getClass(schoolId, classId)
+        globals: globals,
+        schoolClass: serviceTier.getClass(schoolId, classId)
     };
     console.log("ClassId " + classId + " for school " + schoolId);
     console.log(JSON.stringify(pageData));
@@ -50,11 +54,12 @@ router.get('/schools/:schoolId/classes/:classId/subscribed', function(req, res, 
     var schoolId = req.params.schoolId;
     var classId = req.params.classId;
     var pageData =  {
-        schoolClass : serviceTier.getClass(schoolId, classId)
+        globals: globals,
+        schoolClass: serviceTier.getClass(schoolId, classId)
     };
     console.log("ClassId " + classId + " for school " + schoolId);
     console.log(JSON.stringify(pageData));
     res.render('parents-subscribed', pageData);
-})
+});
 
 module.exports = router;

@@ -3,42 +3,15 @@
 html {
     position: relative;
     min-height: 100%;
+    background-color: #dee0e2;
 }
 body {
-    /* Margin bottom by footer height */
     margin-bottom: 60px;
 }
-/*
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #8B687F;
-    color: #c6ca53;
-}
- */
-
-.footer {
-    /* background-color: #8B687F; */
-    /* color: #c6ca53; */
-}
-
 
 .bg-navbar {
     /* background-color: #539987 !important; */
 }
-
-/*
-.fg-navbar {
-    color: #c6ca53;
-}
-
-.fg-navbar a, a:visited {
-    color: white;
-}
-  */
 
 .bg-form {
     background-color: #8aea92;
@@ -46,30 +19,259 @@ body {
 
 /* Custom page CSS
 -------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-    padding: 60px 15px 0;
-}
-
-.footer > .container {
-    padding-right: 15px;
-    padding-left: 15px;
-}
 
 code {
     font-size: 80%;
 }
 
-/*
-.bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
-.bottom_ul li { float:left; line-height:40px;}
-.bottom_ul li:after { content:"/"; color:#c6ca53; margin-right:8px; margin-left:8px;}
-.bottom_ul li a { color:#c6ca53;  font-size:12px;}
-
-
-a:visited {
-    text-decoration: underline;
-    color: #007bff;
+input:focus,
+a:focus {
+    background-color: #ffbf47;
+    outline: 3px solid #ffbf47;
 }
-*/
+
+h1 {
+    font-size: 32px;
+    line-height: 35px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+ul {
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 568px) {
+    h1 {
+        font-size: 40px;
+        line-height: 42px;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    p {
+        font-size: 19px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        font-size: 19px;
+    }
+}
+
+/**
+* Desktop banner
+**/
+
+.desktop-banner {
+    display: none;
+    background: 50% 30% url(/images/banner.png);
+    padding: 60px 30px;
+    margin-bottom: 15px;
+}
+
+.desktop-banner__control {
+    text-align: center;
+    padding:5px 0;
+}
+
+.desktop-banner__control__button {
+    display:inline-block;
+    cursor: pointer;
+}
+
+@media (min-width: 960px) {
+    .desktop-banner {
+        display: block;
+    }
+}
+
+/**
+* Desktop banner
+**/
+
+.card {
+    word-wrap: break-word;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.card__image {
+    width: 100%;
+    margin-bottom:10px;
+    border-radius: 45px;
+}
+
+@media (min-width: 568px) {
+    .card {
+        width: 48%;
+        display: inline-block;
+        float: left;
+        margin-right:2%;
+    }
+
+    .card:nth-child(2) {
+        margin-right:0;
+        margin-left:2%;
+    }
+}
+
+/**
+* Image with text
+**/
+.image-text {
+    position: relative;
+}
+
+.image-text__text {
+    max-width: 30em;
+}
+
+.image-text__image-wrapper {
+    margin-bottom:30px;
+}
+
+.image-text__image-wrapper__image {
+    width: 100%;
+    max-width: 300px;
+}
+
+@media (min-width: 568px) {
+    .image-text__text {
+        float:left;
+    }
+
+    .image-text__image-wrapper {
+        float:left;
+        margin-right: 15px;
+    }
+}
+
+/**
+* Main content container
+**/
+
+.container {
+    background-color: #fff;
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+
+@media (min-width: 568px) {
+    .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 568px) and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/**
+* Main content container
+**/
+footer {
+    width:100%;
+    background-color: #dee0e2;
+}
+
+.footer-wrapper {
+    padding: 15px;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer a {
+    margin-right: 10px;
+    color: #454a4c;
+}
+
+footer a:hover {
+    color: #171819;
+}
+
+@media (min-width: 576px) {
+    .footer-wrapper {
+        max-width: 540px;
+        padding: 15px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-wrapper {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-wrapper {
+        max-width: 1140px;
+    }
+}
+
+/** clear fix - temporary until convert stuff into scss **/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.form-control {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    .form-control {
+        width: 50%;
+    }
+}
+
+/* small fix for nav until I tear it apart */
+.nav-link {
+    font-size: 16px;
+}

@@ -1,56 +1,39 @@
 <div class="container">
-
-    <div class="jumbotron jumbotron-fluid d-none d-lg-block" style="background-position: 50% 30%; background-image: url(/images/banner.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <a class="btn btn-warning btn-lg" href="/parents" role="button">Parents - start talking to your children</a>
+    <div class="desktop-banner">
+        <div class="desktop-banner__control">
+            <input type="button" class="desktop-banner__control__button btn btn-warning btn-lg" href="/parents" value="Parents - start talking to your children"/>
+        </div>
+        <div class="desktop-banner__control">
+            <input type="button" class="desktop-banner__control__button btn btn-outline-info btn-lg" href="/teachers" value="Teachers - how to use at your school"/>
+        </div>
+    </div>
+    <div class="card-group cf">
+        <div class="card">
+            <a href="/parents">
+                <img class="card__image" src="images/parents.jpg" alt="Parents">
+            </a>
+            <div class="card__body">
+                <h4 class="card__title">Parents</h4>
+                <div class="card__text">
+                    <ul>
+                        <li><a href="/parents">SchoolTalk for parents</a></li>
+                        <li><a href="/parents/schools">Get started</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <a class="btn btn-outline-info btn-lg" href="/teachers" role="button">Teachers - how to use at your school</a>
+        </div>
+        <div class="card">
+            <a href="/teachers">
+                <img class="card__image" src="/images/teachers.png" alt="Teachers">
+            </a>
+            <div class="card__body">
+                <h4 class="card__title">Teachers</h4>
+                <div class="card__text">
+                    <ul>
+                        <li><a href="/teachers">SchoolTalk for teachers</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container">
-        <div class="card-group">
-            <div class="card">
-                <a href="/parents">
-                    <img class="card-img-top" src="images/parents.jpg" alt="Parents">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">Parents</h4>
-                    <div class="card-text">
-                        <ul>
-                            <li><a href="/parents">SchoolTalk for parents</a></li>
-                            <li><a href="/parents/schools">Get started</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="/teachers">
-                    <img class="card-img-top" src="/images/teachers.png" alt="Teachers">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">Teachers</h4>
-                    <div class="card-text">
-                        <ul>
-                            <li><a href="/teachers">SchoolTalk for teachers</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 </div>
