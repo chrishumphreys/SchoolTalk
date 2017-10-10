@@ -17,3 +17,9 @@ sudo npm install
 DEBUG=prototype3:* npm start
 
 
+## Dev mode
+
+`npm install -g nodemon` (or install locally from package.json - `npm install`)
+`nodemon ./app.js`
+
+This should reload the node server on any file change in the project
