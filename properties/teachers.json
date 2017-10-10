@@ -1,0 +1,19 @@
+{
+    "teachers" : {
+        "welcome" : {
+            "page_title" :"Welcome teachers",
+            "para1" : "SchoolTalk is a free to use service dedicated to helping parents and children to talk together about their school work.",
+            "para2" : "We are currently in a limited trial phase with selected ",
+            "schools_link" : "schools.",
+            "para3" : "If you would like to be part of that trial and help us make SchoolTalk better please",
+            "contact_link" : "contact us"
+        },
+        "how_works" : {
+            "section_title" : "How it works",
+            "para1" : "We believe parents want to engage with their children about their school work but it isn't always easy for busy parents.",
+            "para2" : "SchoolTalk.org.uk is a simple service to let you, the child's teacher, send short questions to subscribed parents to help them start a rewarding and engaging conversation with their child about the things they've been learning about at school.",
+            "para3" : "Send one question a day, or one a week, it's up to you.",
+            "para4" : "Start by creating a section for each class or year group. Then simply send questions to all parents subscribed to that group."
+        }
+    }
+}

@@ -1,13 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var  globals = require('../properties/globals.json');
+var globals = require('../properties/globals.json');
+var properties = require('../properties/parents.json');
 
 var serviceTier = require('../service-tier');
 
 
 
 router.get('/', function(req, res, next) {
-  res.render('parents', {globals: globals});
+  res.render('parents', {st : properties, globals: globals});
 });
 
 router.get('/schools', function(req, res, next) {

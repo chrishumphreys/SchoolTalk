@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var  globals = require('../properties/globals.json');
+var globals = require('../properties/globals.json');
+var properties = require('../properties/teachers.json');
 
 router.get('/', function(req, res, next) {
-  res.render('teachers', {globals: globals});
+  res.render('teachers', {st : properties, globals: globals});
 });
 
 router.get('/home', function(req, res, next) {
@@ -11,7 +12,7 @@ router.get('/home', function(req, res, next) {
 });
 
 router.get('/signin', function(req, res, next) {
-  res.render('teachers-signin', {globals: globals});
+  res.render('teachers-signin', {st : properties, globals: globals});
 })
 
 router.post('/signin', function(req, res, next) {
@@ -19,7 +20,7 @@ router.post('/signin', function(req, res, next) {
 })
 
 router.get('/signin/forgotten-password', function(req, res, next) {
-  res.render('teachers-forgotten-password', {globals: globals});
+  res.render('teachers-forgotten-password', {st : properties, globals: globals});
 })
 
 router.post('/signin/forgotten-password', function(req, res, next) {
