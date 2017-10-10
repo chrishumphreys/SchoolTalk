@@ -1,0 +1,52 @@
+{
+  "logo": "SchoolTalk",
+  "navigation": {
+    "links": {
+      "home": {
+        "link": "/",
+        "text": "Home"
+      },
+      "parents": {
+        "link": "/parents",
+        "text": "Parents"
+      },
+      "teachers": {
+        "link": "/teachers",
+        "text": "Teachers"
+      },
+      "about": {
+        "link": "/about",
+        "text": "About us"
+      },
+      "sign": {
+        "link": "/teachers/signin",
+        "text": "Teacher Sign in"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© SchoolTalk 2017",
+    "links": {
+      "privacy": {
+        "link": "/privacy",
+        "text": "Privacy policy"
+      },
+      "about": {
+        "link": "/about",
+        "text": "About us"
+      },
+      "faq": {
+        "link": "/faqs",
+        "text": "FAQs"
+      },
+      "contact": {
+        "link": "/contact",
+        "text": "Contact us"
+      },
+      "prototype": {
+        "link": "/prototype",
+        "text": "Original prototype site"
+      }
+    }
+  }
+}

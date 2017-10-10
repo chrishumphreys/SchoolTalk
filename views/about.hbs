@@ -2,14 +2,14 @@
 
     <div class="image-text cf">
         <div class="image-text__image-wrapper">
-            <img class="image-text__image-wrapper__image" src="/images/parents-smaller.jpg">
+            <img class="image-text__image-wrapper__image" src="{{st.about.image_link}}">
         </div>
         <div class="image-text__text">
-            <h1>About SchoolTalk</h1>
-            <p>SchoolTalk is a free to use service dedicated to helping parents and children to talk together about their school work.</p>
+            <h1>{{st.about.page_title}}</h1>
+            <p>{{st.about.description_text}}</p>
             <ul>
-                <li><a href="/parents">For parents</a></li>
-                <li><a href="/teachers">For teachers</a></li>
+                <li><a href="{{st.about.parents_link}}">{{st.about.parents_link_text}}</a></li>
+                <li><a href="{{st.about.teachers_link}}">{{st.about.teachers_link_text}}</a></li>
             </ul>
         </div>
     </div>
