@@ -1,0 +1,21 @@
+{
+    "contact": {
+        "page_title": "Contacting SchoolTalk",
+        "instructions" : "Send us a message using the form below.",
+        "form" : {
+            "email" : {
+                "label" : "Your email address",
+                "placeholder" : "name@example.com"
+            },
+            "subject" : {
+                "label" : "Subject"
+            },
+            "message" : {
+                "label" : "Message"
+            },
+            "send" : {
+                "label" : "Send"
+            }
+        }
+    }
+}

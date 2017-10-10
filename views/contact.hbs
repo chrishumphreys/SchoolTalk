@@ -1,24 +1,24 @@
 <div class="container">
-    <h1>Contacting SchoolTalk</h1>
+    <h1>{{st.contact.page_title}}</h1>
 
-    <p>Send us a message using the form below.</p>
+    <p>{{st.contact.instructions}}</p>
 
 
     <form>
         <div>
-            <label for="inputEmail">Your email address</label>
-            <input type="email" placeholder="name@example.com" class="form-control" id="inputEmail">
+            <label for="inputEmail">{{st.contact.form.email.label}}</label>
+            <input type="email" placeholder="{{st.contact.form.email.placeholder}}" class="form-control" id="inputEmail">
         </div>
         <div>
-            <label for="inputSubject">Subject</label>
-            <input type="email" placeholder="name@example.com" class="form-control" id="inputSubject">
+            <label for="inputSubject">{{st.contact.form.subject.label}}</label>
+            <input type="subject" class="form-control" id="inputSubject">
         </div>
         <div>
-            <label for="inputMessage">Message</label>
+            <label for="inputMessage">{{st.contact.form.message.label}}</label>
             <textarea class="form-control" id="inputMessage" rows="3"></textarea>
         </div>
         <div>
-            <button type="button" class="btn btn-primary">Send</button>
+            <button type="button" class="btn btn-primary">{{st.contact.form.send.label}}</button>
         </div>
     </form>
 
