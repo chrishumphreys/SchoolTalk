@@ -2,15 +2,22 @@
 
     <div class="image-text cf">
         <div class="image-text__image-wrapper">
-            <img class="image-text__image-wrapper__image" src="{{st.about.image_link}}">
+            <img class="image-text__image-wrapper__image" src="{{st.about.about_service.image_link}}">
         </div>
         <div class="image-text__text">
-            <h1>{{st.about.page_title}}</h1>
-            <p>{{st.about.description_text}}</p>
-            <ul>
-                <li><a href="{{st.about.parents_link}}">{{st.about.parents_link_text}}</a></li>
-                <li><a href="{{st.about.teachers_link}}">{{st.about.teachers_link_text}}</a></li>
-            </ul>
+            <h1>{{st.about.about_service.page_title}}</h1>
+            <p>{{st.about.about_service.para1}}</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p>{{st.about.about_service.para2}}</p>
+            <p>{{st.about.about_service.para3}} <a href="/parents/schools">{{st.about.about_service.schools_link}}</a></p>
+
+            <h1>{{st.about.about_business.section_title}}</h1>
+            <p>{{st.about.about_business.para1}}</p>
+            <p>{{st.about.about_business.para2}} <a href="/contact">{{st.about.about_business.contact_link}}</a></p></p>
+            <p>{{st.about.about_business.para3}} <a href="/contact">{{st.about.about_business.contact_link}}</a> {{st.about.about_business.contact_suffix}}</p></p>
         </div>
     </div>
 

@@ -2,18 +2,26 @@
     "teachers" : {
         "welcome" : {
             "page_title" :"Welcome teachers",
-            "para1" : "SchoolTalk is a free to use service dedicated to helping parents and children to talk together about their school work.",
+            "reference_link" : "Parent involvement and student academic performance: A multiple mediational analysis,",
+            "reference_suffix" : "Topor et al 2012. Accessed 10 October 2017.",
+            "para1" : "There's lots of research that shows that parents' involvement in their child's education has many benefits.  At SchoolTalk.org.uk, we believe that parents want to engage with their child about their school work but it isn't always easy, it's hard to know what to ask their child to start a conversation."
+        },
+        "what_is" : {
+            "section_title" :"What is SchoolTalk?",
+            "para1" : "SchoolTalk is dedicated to helping parents and children to talk together about their schoolwork.  It's a really simple service that enables you, the child's teacher, to send parents questions they can ask their child, to help them start a rewarding and engaging conversation with their child about the things they've been learning about at school.  Our service is free to use for parents, teachers and schools.",
             "para2" : "We are currently in a limited trial phase with selected ",
             "schools_link" : "schools.",
             "para3" : "If you would like to be part of that trial and help us make SchoolTalk better please",
-            "contact_link" : "contact us"
+            "contact_link" : "get in touch.",
+            "para4" : "Already using SchoolTalk?  Sign in",
+            "signin_link" : "here."
+
         },
         "how_works" : {
             "section_title" : "How it works",
-            "para1" : "We believe parents want to engage with their children about their school work but it isn't always easy for busy parents.",
-            "para2" : "SchoolTalk.org.uk is a simple service to let you, the child's teacher, send short questions to subscribed parents to help them start a rewarding and engaging conversation with their child about the things they've been learning about at school.",
-            "para3" : "Send one question a day, or one a week, it's up to you.",
-            "para4" : "Start by creating a section for each class or year group. Then simply send questions to all parents subscribed to that group."
+            "para1" : "Start by creating a section for each class or year group. Parents can sign up to the relevant section for their child, and you can start sending them questions.  It's as simple as that!",
+            "para2" : "Send one question a day, one a week, or as many as you like, it's up to you.",
+            "para3" : "Along with the questions, you can also give parents some keywords to look out for in their conversations, some hints to help their conversation along, and even some web links for them to find out more about the subject themselves."
         }
     }
 }

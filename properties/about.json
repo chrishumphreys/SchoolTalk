@@ -1,11 +1,20 @@
 {
   "about": {
-    "page_title": "About SchoolTalk",
-    "description_text": "SchoolTalk is a free to use service dedicated to helping parents and children to talk together about their school work.",
-    "parents_link_text": "For parents",
-    "teachers_link_text": "For teachers",
-    "parents_link": "/parents",
-    "teachers_link": "/teachers",
-    "image_link": "/images/parents-smaller.jpg"
+      "about_service" : {
+        "page_title": "About SchoolTalk",
+        "para1": "At SchoolTalk.org.uk, we are passionate about children's education.  We know that getting parents involved in their child's education can really help their child in lots of ways. But we also know it's not always easy for parents to do that.",
+        "para2": "That's why we came up with SchoolTalk.  It's a really simple service dedicated to helping parents and children to talk together about their schoolwork.  It works by enabling teachers to send questions to parents to help them start an engaging and rewarding conversation with their child.  SchoolTalk is free to use for parents, teachers and schools.",
+        "para3": "We are currently in a limited trial phase with selected",
+        "schools_link" : "schools.",
+        "image_link": "/images/parents-smaller.jpg"
+      },
+      "about_business" : {
+          "section_title" : "About SchoolTalk.org.uk",
+          "para1" :"We're not just passionate about education, we love developing software services that are simple to use and help make it easier for people to do the things they want to do.",
+          "para2" :"We work on SchoolTalk in our spare time because it's an idea we really believe in.  While we're in our limited trial phase, we're working hard to make the service as good as it can be so please bear with us if it's not quite perfect.  If you'd like to take part in our trial, or if you have any comments or suggestions, we'd love to hear them, please",
+          "contact_link" : "get in touch.",
+          "para3" : "If you're a developer, content or user experience designer, or have other skills that could help make SchoolTalk better, and you'd like to get involved, then we'd love you to ",
+          "contact_suffix" : "too."
+      }
   }
 }
