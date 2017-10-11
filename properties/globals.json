@@ -3,8 +3,7 @@
   "navigation": {
     "links": {
       "home": {
-        "link": "/",
-        "text": "Home"
+        "link": "/"
       },
       "parents": {
         "link": "/parents",
@@ -20,7 +19,7 @@
       },
       "sign": {
         "link": "/teachers/signin",
-        "text": "Teacher Sign in"
+        "text": "Teacher sign in"
       }
     }
   },
