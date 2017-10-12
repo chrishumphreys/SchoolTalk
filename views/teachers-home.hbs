@@ -1,5 +1,54 @@
 <div class="container">
 
-    <h1>Welcome {{name}}</h1>
+    <div>
+        <div>
+        <h1>Welcome {{name}}</h1>
 
+        <h2>Send a new question:</h2>
+
+            <form action="/teachers/send-question" method="POST">
+                <div>
+                    <label for="question">Question</label>
+                    <input name="question" type="text" class="form-control" id="question" placeholder="Enter question">
+                </div>
+                <div>
+                    <label for="hints">Hints</label>
+                    <input name="hints" type="text" class="form-control" id="hints" placeholder="Enter optional hints">
+                </div>
+                <div>
+                    <label for="references">References</label>
+                    <textarea name="references" type="text" class="form-control" id="references"></textarea>
+                </div>
+                <div>
+                    <label for="classes">Send to:</label>
+                    <ul id="classes" class="classes-list">
+                        {{#classes}}
+                        <li><label>
+                        <input type="radio" name="classId" value="{{classId}}"/>
+                            {{className}} ({{schoolName}})
+                        </label>
+                        </li>
+                        {{/classes}}
+                    </ul>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div><div><p></p></div></div>
+    <div>
+        <div>
+            <h2>Recent questions:</h2>
+            <ul id="recent-questions" class="question-list">
+                {{#classes}}
+                    {{#questions}}
+                        <li>{{question}} - ({{...className}})</li>
+                    {{/questions}}
+                {{/classes}}
+            </ul>
+        </div>
+    </div>
 </div>

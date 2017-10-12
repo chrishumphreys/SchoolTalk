@@ -22,6 +22,12 @@ module.exports = {
                 description : 'Class 4D with Miss Taylor',
                 classId : 1,
                 schoolId : 1
+            },
+            {
+                name : 'Class 2S',
+                description : 'Class 2S with Miss Taylor',
+                classId : 4,
+                schoolId : 1
             }
         ],
 
@@ -43,7 +49,9 @@ module.exports = {
 
     teachers : [
         {
-            email : 'taylor',
+            email : 'jtaylor@longhampton.net',
+            name : 'Janet Taylor',
+            userId : '1',
             classes : [
                 {
                     schoolId: 1,
@@ -58,8 +66,20 @@ module.exports = {
                             links : ['https://en.wikipedia.org/wiki/Continent']
                         }
                     ]
+                },
+                {
+                    schoolId: 1,
+                    classId:4,
+                    className : 'Class 2S',
+                    schoolName : 'Long Hampton Primary',
 
-
+                    questions : [
+                        {
+                            question : 'Name some primary colours',
+                            hints : [ "red", "blue", "green"],
+                            links : []
+                        }
+                    ]
                 }
             ]
         }
@@ -90,8 +110,46 @@ module.exports = {
         }
         console.log("Could not find class");
         return null;
+    },
+
+    findTeacherByEmail : function(emailInput) {
+        for (var teacherIndex in this.teachers) {
+            var email = this.teachers[teacherIndex].email;
+            if (email == emailInput) {
+                return this.teachers[teacherIndex].userId;
+            }
+        }
+        return null;
+    },
+
+    findTeacherByUserId : function(userId) {
+        for (var teacherIndex in this.teachers) {
+            if (this.teachers[teacherIndex].userId == userId) {
+                return this.teachers[teacherIndex];
+            }
+        }
+        return null;
+    },
+
+    findClassForTeacher : function(userId, classId) {
+        for (teacherIndex in this.teachers) {
+            if (this.teachers[teacherIndex].userId == userId) {
+                for (var classIndex in this.teachers[teacherIndex].classes) {
+                    var teacherClass = this.teachers[teacherIndex].classes[classIndex];
+                    if (classId == teacherClass.classId) {
+                        return teacherClass;
+                    }
+                }
+            }
+        }
+        return null;
+    },
+
+    submitQuestion : function(userId, classId, question) {
+        var classToSend = this.findClassForTeacher(userId, classId);
+        if (classToSend != null) {
+            classToSend.questions.push(question);
+        }
     }
-
-
 
 };

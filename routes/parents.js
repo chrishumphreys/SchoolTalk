@@ -8,7 +8,8 @@ var serviceTier = require('../service-tier');
 
 
 router.get('/', function(req, res, next) {
-  res.render('parents', {st : properties, globals: globals});
+  var userId = req.cookies.userId;
+  res.render('parents', {st : properties, globals: globals, userId:userId});
 });
 
 router.get('/schools', function(req, res, next) {

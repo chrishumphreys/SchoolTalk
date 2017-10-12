@@ -11,6 +11,7 @@
             "para2" : "That's where SchoolTalk comes in.",
             "para3" : "It's a really simple, free service that lets your child's teacher send you questions you can ask your child about their schoolwork.  They can also give you some keywords to look out for in your conversation, some hints to help your conversation along, and even some web links for you to find out more about the subject yourself.  Our vision is for every parent to be able to have regular, rewarding conversations with their child about their education.  We think this is a great place to start.",
             "para4" : "We are currently in a limited trial phase with selected schools.",
+            "start_button" : "Get started"
         },
         "how_work" : {
 
@@ -19,8 +20,7 @@
 
             "list1" : "find your child's school",
             "list2" : "select their year group or class",
-            "list3" : "simply enter your email address to start receiving questions.",
-        "start_button" : "Get started"
+            "list3" : "simply enter your email address to start receiving questions."
         },
         
         "privacy" : {
