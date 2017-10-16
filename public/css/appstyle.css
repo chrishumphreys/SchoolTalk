@@ -103,7 +103,7 @@ p {
 }
 
 /**
-* Desktop banner
+* Card component
 **/
 
 .card {
@@ -276,6 +276,54 @@ footer a:hover {
     font-size: 16px;
 }
 
+/**
+* Image component
+**/
+.image-list__item {
+    width: 100%;
+    padding: 5px;
+    max-width:250px;
+    margin: 0 auto 15px auto;
+    text-align: center;
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.5);
+    box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+
+.image-list__item a {
+    color: #212529;
+}
+
+.image-list__item a:hover {
+    color: #212529;
+}
+
+.image-list__item__header {
+    font-size: 19px;
+    margin: 0;
+    padding: 3px 0;
+}
+
+.image-list__item__image {
+    text-align: center;
+    width: 100%;
+    height:auto;
+    max-width:250px;
+}
+
+@media (min-width: 576px) {
+    .image-list__item {
+        width: 50%;
+        float:left;
+        margin: 15px 15px 0 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .image-list__item {
+        width: 33%;
+    }
+}
 blockquote {
     background: #f9f9f9;
     border-left: 10px solid #ccc;
