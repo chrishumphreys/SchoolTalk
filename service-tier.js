@@ -3,13 +3,13 @@ module.exports = {
     allSchools : [
         {
             name : 'Long Hampton Primary',
-            logoSmall : '/images/schools/course-tile-pre-reader-express.png',
+            logoSmall : '/images/schools/school.png',
             place : 'Hemel Hempstead',
             schoolId : 1
         },
         {
             name : 'Hove Primary',
-            logoSmall : '/images/schools/course-tile-pre-reader-express.png',
+            logoSmall : '/images/schools/school.png',
             place : 'Brighton',
             schoolId : 2
         }

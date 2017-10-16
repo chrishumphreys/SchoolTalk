@@ -1,17 +1,20 @@
 <div class="container cf">
     <h1>Please select your child's school</h1>
 
-    {{#each schools}}
-    <div class="card border-success mb-3" style="width: 20rem;">
-        <div class="card-header text-center">
-            {{name}}
-        </div>
-        <img class="card-img-top" src="{{logoSmall}}" alt="{{name}} logo">
-        <div class="card-body">
-            <p class="card-text text-center">{{place}}</p>
-            <a href="/parents/schools/{{schoolId}}/classes" class="btn btn-primary card-text text-center">Select</a>
-        </div>
+    <div class="image-list cf">
+        {{#each schools}}
+            <div class="image-list__item">
+                <a href="/parents/schools/{{schoolId}}/classes">
+                    <h2 class="image-list__item__header">
+                        {{name}}
+                    </h2>
+                    <img class="image-list__item__image" src="{{logoSmall}}" alt="{{name}}" />
+                    <div class="image-list__item__subtitle">
+                        {{place}}
+                    </div>
+                </a>
+            </div>
+        {{/each}}
     </div>
-    {{/each}}
 
 </div>
