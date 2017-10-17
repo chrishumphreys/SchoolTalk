@@ -2,7 +2,7 @@
     "parents" : {
         "page_title" : "Welcome parents",
         "intro1" : "\"What did you do at school today?\"",
-        "intro2" : "\"Stuff.\"",
+        "intro2" : "\"Nothing.\"",
         "intro3" : "Sound familiar?  You need SchoolTalk!",
 
         "what_is" : {
@@ -10,17 +10,17 @@
             "para1" : "As parents, we've all had that conversation with our child at one time or another.  We want to understand more about what they're learning, to play an active part in their education.  We want to be able to engage with them about their schoolwork, to help support and motivate them. But it’s not that easy.  It's hard to know how to do that, how to encourage them to share their education with you.",
             "para2" : "That's where SchoolTalk comes in.",
             "para3" : "It's a really simple, free service that lets your child's teacher send you questions you can ask your child about their schoolwork.  They can also give you some keywords to look out for in your conversation, some hints to help your conversation along, and even some web links for you to find out more about the subject yourself.  Our vision is for every parent to be able to have regular, rewarding conversations with their child about their education.  We think this is a great place to start.",
-            "para4" : "We are currently in a limited trial phase with selected schools.",
-            "start_button" : "Get started"
+            "para4" : "We are currently in a limited trial phase with selected schools."
         },
+        
         "how_work" : {
-
             "section_title" : "How does it work?",
             "para1" : "Once your child's school has signed up to SchoolTalk, their teacher will be able to email short questions to you by email. To get started:",
 
             "list1" : "find your child's school",
             "list2" : "select their year group or class",
-            "list3" : "simply enter your email address to start receiving questions."
+            "list3" : "simply enter your email address to start receiving questions.",
+            "start_button" : "Get started"
         },
         
         "privacy" : {
@@ -29,7 +29,7 @@
             "para2" : "To use SchoolTalk, schools, teachers and parents aren't required to provide any child's details. That means we don't collect or store any information about your child or anyone else's.",
             "para3" : "The questions the teacher will send you are for a particular class or year group, they're not specific to your child.  Only questions provided by the school's teachers can be sent to parents.",
             "para4" : "You can find more information in our",
-            "privacy_link_text" : "privacy policy."
+            "privacy_link_text" : "privacy policy"
         }
     }
 }
