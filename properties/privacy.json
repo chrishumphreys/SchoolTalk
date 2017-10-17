@@ -1,0 +1,36 @@
+{
+    "privacy" : {
+        "page_title" : "Privacy policy",
+        
+         "privacy_parents" : {
+            "section_title" : "Privacy policy for parents",
+            "parents_question1" : "What personal information do we collect and store?",
+            "parents_answer1" : "We need your name and email address so that we can email you questions from your child’s teacher. We also keep a record of the schools and classes/groups you’ve signed up to receive questions for. In this privacy policy, we call all of that information “your details”.",
+            "parents_question2" : "What do we use your details for?",
+            "parents_answer2" : "We only use your details to send you questions provided by your child’s teacher. We may also email you very occasionally with important information about SchoolTalk but only if we think it’s necessary.",
+            "parents_question3" : "Who do we share your details with?",
+            "parents_answer3" : "No one. We don’t even tell the school or teachers which parents have signed up to receive questions.",
+            "parents_question4" : "Will we send you any marketing emails or sell any of your details?",
+            "parents_answer4" : "No, and we never will",
+            "parents_question5" : "Do we store your details securely?",
+            "parents_answer5" : "Yes, of course. We use industry standard methods to keep your details safe.",
+            "parents_question6" : "What if I want to unsubscribe?",
+            "parents_answer6" : "Please email support@schooltalk.org.uk from the email address you used to sign up, with “Unsubscribe” in the subject line. We’ll remove all your details from our records and you’ll no longer receive questions from schools or classes/groups you’ve signed up for."
+          },
+          
+         
+          "privacy_teachers" : {
+            "section_title" : "Privacy policy for schools and teachers",
+            "teacher_question1" : "What personal information do we collect and store?",
+            "teacher_answer1" : "We need the school’s name, class or group name(s), a teacher’s name for each class or group and an email address and password for each teacher.",
+            "teacher_question2" : "What do we use your information for?",
+            "teacher_answer2" : "We only use information about schools and teachers to help parents find their child’s class so that they can sign up to receive questions. Teachers’ email addresses and passwords are also used to sign in to the service so that you can send questions to parents. We may also email teachers very occasionally with important information about SchoolTalk but only if we think it’s necessary.",
+            "teacher_question3" : "Who do we share your information with?",
+            "teacher_answer3" : "The names of schools, teachers and classes/groups are visible on our website, so that parents can find the right school, class or group to sign up for. The questions are emailed to parents from SchoolTalk.org.uk. We never give teachers’ email addresses to parents.",
+            "teacher_question4" : "Will we send you any marketing emails or sell any of your information?",
+            "teacher_answer4" : "No, and we never will",
+            "teacher_question5" : "Do we store your details securely?",
+            "teacher_answer5" : "Yes, of course. We use industry standard methods to keep your details safe.",
+          }
+     }
+}
