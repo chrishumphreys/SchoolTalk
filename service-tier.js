@@ -1,3 +1,5 @@
+var emailService = require('./email');
+
 module.exports = {
 
     allSchools : [
@@ -149,6 +151,14 @@ module.exports = {
         var classToSend = this.findClassForTeacher(userId, classId);
         if (classToSend != null) {
             classToSend.questions.push(question);
+
+            if (process.env.SEND_EMAIL == 'true') {
+                console.log('Sending email...');
+                emailService.sendEmail();
+            } else {
+                console.log('Skipping email as disabled by env param: ', process.env.SEND_EMAIL);
+            }
+
         }
     }
 
