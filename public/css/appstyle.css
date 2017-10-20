@@ -349,3 +349,13 @@ blockquote p {
     list-style: none;
     margin: 0;
 }
+
+.privacy-policy-list {
+    padding: 0;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.privacy-answer {
+    margin-left: 20px;
+}

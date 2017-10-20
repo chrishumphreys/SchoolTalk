@@ -10,11 +10,12 @@ This is still very much WIP, but if you want to help contact me.
 
 This is an Express.JS site with Handlebars view and hardcoded test service tier.
 
-To start:
+## To start in production:
 
 sudo npm install
 
-DEBUG=prototype3:* npm start
+export NODE_ENV=production
+npm start
 
 
 ## Dev mode

@@ -55,9 +55,18 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.set('port', process.env.PORT || 3000);
-var server = app.listen(app.get('port'), function() {
-  console.log('Express server listening on port ' + server.address().port);
-});
+var detectDebug = function() {
+    return process.env.NODE_ENV !== 'production';
+};
+
+if (detectDebug()) {
+  console.log("debug mode")
+  app.set('port', process.env.PORT || 3000);
+  var server = app.listen(app.get('port'), function() {
+    console.log('Express server listening on port ' + server.address().port);
+  });
+} else {
+  console.log("production mode " + process.env.NODE_ENV);
+}
 
 module.exports = app;
