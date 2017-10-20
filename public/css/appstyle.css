@@ -4,9 +4,13 @@ html {
     position: relative;
     min-height: 100%;
     background-color: #dee0e2;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 body {
     margin-bottom: 60px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .bg-navbar {
@@ -40,6 +44,14 @@ h2 {
     font-size: 20px;
     line-height: 22px;
     margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 15px;
+    margin-top: 30px;
 }
 
 ul {
@@ -50,6 +62,7 @@ p {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 12px;
+    color:#757575;
 }
 
 @media (min-width: 568px) {
@@ -64,6 +77,11 @@ p {
         line-height: 30px;
     }
 
+    h3 {
+        font-size: 19px;
+        line-height: 25px;
+    }
+
     p {
         font-size: 19px;
         line-height: 25px;
@@ -73,6 +91,12 @@ p {
     ul {
         font-size: 19px;
     }
+}
+
+h2.section-heading {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 15px;
+    margin-top: 0;
 }
 
 /**
@@ -344,6 +368,10 @@ blockquote p {
     display: inline;
 }
 
+section {
+    margin-bottom: 45px;
+}
+
 .classes-list {
     padding: 0;
     list-style: none;
@@ -353,9 +381,42 @@ blockquote p {
 .privacy-policy-list {
     padding: 0;
     list-style: none;
-    margin-left: 20px;
 }
 
-.privacy-answer {
-    margin-left: 20px;
+.privacy-policy-list__nav-link {
+    font-size: 14px;
+}
+
+.scroll-back-top {
+    font-size: 14px;
+}
+
+aside {
+    margin-bottom: 30px;
+}
+
+.scroll-back-top--desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .scroll-back-top {
+        display: none;
+    }
+
+    .scroll-back-top--desktop {
+        display: block;
+    }
+
+    aside {
+        float:left;
+        width:25%;
+    }
+
+    .content-with-aside {
+        float:left;
+        width:75%;
+        padding-left: 30px;
+    }
 }

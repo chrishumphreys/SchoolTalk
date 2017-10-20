@@ -3,7 +3,7 @@
         "page_title" : "Privacy policy",
         
          "privacy_parents" : {
-            "section_title" : "Privacy policy for parents",
+            "section_title" : "Parents",
             "parents_question1" : "What personal information do we collect and store?",
             "parents_answer1" : "We need your name and email address so that we can email you questions from your child’s teacher. We also keep a record of the schools and classes/groups you’ve signed up to receive questions for. In this privacy policy, we call all of that information “your details”.",
             "parents_question2" : "What do we use your details for?",
@@ -20,7 +20,7 @@
           
          
           "privacy_teachers" : {
-            "section_title" : "Privacy policy for schools and teachers",
+            "section_title" : "Schools and teachers",
             "teacher_question1" : "What personal information do we collect and store?",
             "teacher_answer1" : "We need the school’s name, class or group name(s), a teacher’s name for each class or group and an email address and password for each teacher.",
             "teacher_question2" : "What do we use your information for?",
