@@ -31,9 +31,6 @@ module.exports = {
             console.log(html);
             console.log("**************************************************************")
             data.html = html;
-        });
-
-        if (true) {
 
             var transporter = nodemailer.createTransport({
                 host: 'smtp.ethereal.email',
@@ -68,7 +65,7 @@ module.exports = {
 
             transporter.sendMail(mailOptions, callback);
 
-        }
+        });
     }
 
 
