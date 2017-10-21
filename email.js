@@ -3,22 +3,25 @@ const nodemailer = require('nodemailer');
 const handlebars = require('handlebars');
 const fs = require('fs');
 const path = require('path');
+var  properties = require('./properties/email.json');
 
 
 module.exports = {
 
 
-    "sendEmail" : function() {
+    "sendEmail" : function(emailData) {
 
 
         var data = {
-            subject: 'Test email from SchoolTalk.org.uk',
-            from: 'replies@schooltalk.org.uk',
+            subject: properties.email.subject,
+            from: properties.email.from,
             to : "chris@schooltalk.org.uk",
-            question : 'a sample question',
-            hints : ["hint1", "hint2", "hint3"],
-            references : ["link1", "link2"],
-            text : "test test"
+            name : "Test user",
+            question : emailData.question,
+            hints : emailData.hints,
+            references : emailData.links,
+            text : "test test",
+            st : properties
         };
 
         var template_path = path.join(__dirname, 'emails');
@@ -28,7 +31,7 @@ module.exports = {
             var template = handlebars.compile(source);
             var html = template(data);
             console.log("************************ sending email ***********************")
-            console.log(html);
+            //console.log(html);
             console.log("**************************************************************")
             data.html = html;
 
@@ -58,9 +61,6 @@ module.exports = {
                 console.log('Message sent: %s', info.messageId);
                 // Preview only available when sending through an Ethereal account
                 console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-                // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
-                // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
             };
 
             transporter.sendMail(mailOptions, callback);

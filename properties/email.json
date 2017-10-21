@@ -1,0 +1,10 @@
+{
+    "email" : {
+        "para1" : "A question from SchoolTalk",
+        "para2" : "paragraph2",
+        "hints" : "Hints:",
+        "references" : "For more information:",
+        "from" : "contact@schooltalk.org.uk",
+        "subject" : "Question email from SchoolTalk.org.uk"
+    }
+}

@@ -151,10 +151,13 @@ module.exports = {
         var classToSend = this.findClassForTeacher(userId, classId);
         if (classToSend != null) {
             classToSend.questions.push(question);
+            //TODO split hints and links on newlines to array
+            console.log(question);
 
+            console.log(question);
             if (process.env.SEND_EMAIL == 'true') {
                 console.log('Sending email...');
-                emailService.sendEmail();
+                emailService.sendEmail(question);
             } else {
                 console.log('Skipping email as disabled by env param: ', process.env.SEND_EMAIL);
             }
