@@ -14,14 +14,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{globals.navigation.links.about.link}}">{{globals.navigation.links.about.text}}</a>
             </li>
+            {{#if userId}}
+            <li class="nav-item">
+                <a class="nav-link" href="{{globals.navigation.links.teachers-home.link}}">{{globals.navigation.links.teachers-home.text}}</a>
+            </li>
+            {{/if}}
             <li class="nav-item">
                 {{#if userId}}
                     <a class="nav-link" href="{{globals.navigation.links.signout.link}}">{{globals.navigation.links.signout.text}}</a>
                 {{else}}
                     <a class="nav-link" href="{{globals.navigation.links.sign.link}}">{{globals.navigation.links.sign.text}}</a>
                 {{/if}}
-
-
             </li>
         </ul>
     </div>

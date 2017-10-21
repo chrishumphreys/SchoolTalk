@@ -24,6 +24,10 @@
       "signout": {
         "link": "/teachers/signout",
         "text": "Logout"
+      },
+      "teachers-home": {
+        "link": "/teachers/home",
+        "text": "Teachers Home"
       }
     }
   },

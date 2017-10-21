@@ -6,11 +6,11 @@ var  globals = require('../properties/globals.json');
 router.get('/', function(req, res, next) {
     var userId = req.cookies.userId;
     console.log("userId", userId);
-    if (userId == null) {
+    //if (userId == null) {
         res.render('index', { globals: globals });
-    } else {
-        res.redirect(302, '/teachers/home');
-    }
+    //} else {
+    //    res.redirect(302, '/teachers/home');
+    //}
 });
 
 module.exports = router;
