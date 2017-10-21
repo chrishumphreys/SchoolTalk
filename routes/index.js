@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     var userId = req.cookies.userId;
     console.log("userId", userId);
     //if (userId == null) {
-        res.render('index', { globals: globals });
+        res.render('index', { globals: globals, userId: userId});
     //} else {
     //    res.redirect(302, '/teachers/home');
     //}
