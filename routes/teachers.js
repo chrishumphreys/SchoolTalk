@@ -10,23 +10,35 @@ router.get('/', function(req, res, next) {
   res.render('teachers', {st : properties, globals: globals, userId : userId});
 });
 
-router.get('/home', function(req, res, next) {
-  var userId = req.cookies.userId;
-  if (userId == null) {
-    res.redirect(302, '/teachers/signin');
-  } else {
-      var teacher = serviceTier.findTeacherByUserId(userId);
-      if (teacher == null) {
+var displayTeacherHome = function(req, res, questionForm, next) {
+    var userId = req.cookies.userId;
+    var teacher = serviceTier.findTeacherByUserId(userId);
+    if (teacher == null) {
         res.redirect(302, '/teachers/signin');
-      } else {
-          res.render('teachers-home', {
-              name: teacher.name,
-              classes : teacher.classes,
-              globals: globals,
-              userId: userId
-          });
-      }
-  }
+    } else {
+        res.render('teachers-home', {
+            name: teacher.name,
+            classes : teacher.classes,
+            globals: globals,
+            userId: userId,
+            question : questionForm
+        });
+    }
+};
+
+var ensureLoggedIn = function(req, res) {
+    var userId = req.cookies.userId;
+    if (userId == null) {
+        res.redirect(302, '/teachers/signin');
+        return false;
+    }
+    return true;
+};
+
+router.get('/home', function(req, res, next) {
+    if (ensureLoggedIn(req, res)) {
+        displayTeacherHome(req, res, null, next);
+    }
 });
 
 router.get('/signin', function(req, res, next) {
@@ -49,10 +61,8 @@ router.post('/signin', function(req, res, next) {
 });
 
 router.post('/send-question', function(req, res, next) {
-    var userId = req.cookies.userId;
-    if (userId == null) {
-        res.redirect(302, '/teachers/signin');
-    } else {
+    if (ensureLoggedIn(req, res)) {
+        var userId = req.cookies.userId;
         var teacher = serviceTier.findTeacherByUserId(userId);
         if (teacher == null) {
             res.redirect(302, '/teachers/signin');
@@ -75,6 +85,28 @@ router.get('/signin/forgotten-password', function(req, res, next) {
 
 router.post('/signin/forgotten-password', function(req, res, next) {
   res.redirect(302, '/teachers/signin');
+});
+
+router.get('/question/:classId/:questionId', function(req, res, next){
+    if (ensureLoggedIn(req, res)) {
+        var userId = req.cookies.userId;
+        var classId = req.params.classId;
+        var questionId = req.params.questionId;
+
+        var questionData = serviceTier.findQuestion(userId, classId, questionId);
+
+        var questionForm = {
+            questionId : questionData.questionId,
+            question : questionData.question,
+            hints : questionData.hints.join('\r\n'),
+            links : questionData.links.join('\r\n')
+        };
+
+        console.log('question:')
+        console.log(questionForm);
+
+        displayTeacherHome(req, res, questionForm, next);
+    }
 });
 
 module.exports = router;

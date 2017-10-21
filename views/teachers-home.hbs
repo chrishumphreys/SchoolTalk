@@ -9,15 +9,15 @@
             <form action="/teachers/send-question" method="POST">
                 <div>
                     <label for="question">Question</label>
-                    <input name="question" type="text" class="form-control" id="question" placeholder="Enter question">
+                    <input name="question" type="text" class="form-control" id="question" placeholder="Enter question" {{#if question.questionId}}value="{{question.question}}"{{/if}}>
                 </div>
                 <div>
                     <label for="hints">Hints</label>
-                    <textarea name="hints" type="text" class="form-control" id="hints"></textarea>
+                    <textarea name="hints" type="text" class="form-control" id="hints">{{#if question.questionId}}{{question.hints}}{{/if}}</textarea>
                 </div>
                 <div>
                     <label for="references">References</label>
-                    <textarea name="references" type="text" class="form-control" id="references"></textarea>
+                    <textarea name="references" type="text" class="form-control" id="references">{{#if question.questionId}}{{question.links}}{{/if}}</textarea>
                 </div>
                 <div>
                     <label for="classes">Send to:</label>
@@ -45,7 +45,7 @@
             <ul id="recent-questions" class="question-list">
                 {{#classes}}
                     {{#questions}}
-                        <li>{{question}} - ({{...className}})</li>
+                        <li><a href="/teachers/question/{{...classId}}/{{questionId}}">{{question}} - ({{...className}})</a></li>
                     {{/questions}}
                 {{/classes}}
             </ul>

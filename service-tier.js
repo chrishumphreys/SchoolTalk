@@ -63,6 +63,7 @@ module.exports = {
 
                     questions : [
                         {
+                            questionId : 1,
                             question : 'How many continents are there?',
                             hints : [ '7', "Asia, Africa, North America, South America, Antarctica, Europe, and Australia"],
                             links : ['https://en.wikipedia.org/wiki/Continent']
@@ -77,6 +78,7 @@ module.exports = {
 
                     questions : [
                         {
+                            questionId : 1,
                             question : 'Name some primary colours',
                             hints : [ "red", "blue", "green"],
                             links : []
@@ -157,7 +159,8 @@ module.exports = {
             var questionData = {
                 question : question.question,
                 hints : [],
-                links : []
+                links : [],
+                questionId : classToSend.questions.length + 1
             };
             if (question.hints != null) {
                 var hints = question.hints.split("\r\n");
@@ -215,6 +218,16 @@ module.exports = {
 
     getAllSentEmails : function() {
         return this.sentEmails;
-    }
+    },
 
+    findQuestion : function(userId, classId, questionId){
+        var classData = this.findClassForTeacher(userId, classId)
+        for (var questionIndex in classData.questions) {
+            var question = classData.questions[questionIndex];
+            if (questionId == question.questionId) {
+                return question;
+            }
+        }
+        return null;
+    }
 };
