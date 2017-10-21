@@ -1,6 +1,24 @@
-Here is a link to reset your password
+Hi {{name}}
 
-[image: SchoolTalk]
-<http://schooltalk.org.uk/images/logo-small.png/>
+{{st.email.para1}}
 
-*Whoops, you've forgotten your password...*
+{{st.email.para2}} {{classGroupName}} {{st.email.para3}} {{teacherName}}
+
+{{question}}
+
+
+{{st.email.hints}}
+{{#hints}}
+  {{.}}
+{{/hints}}
+
+{{st.email.references}}
+{{#links}}
+  {{.}}
+{{/links}}
+
+
+Email: contact@schooltalk.org.uk
+
+http://schooltalk.org.uk/privacy
+http://schooltalk.org.uk/unsubscribe
