@@ -64,4 +64,13 @@ router.get('/schools/:schoolId/classes/:classId/subscribed', function(req, res, 
     res.render('parents-subscribed', pageData);
 });
 
+router.get('/unsubscribe', function(req, res, next) {
+    var userId = req.cookies.userId;
+    res.render('unsubscribe', {st : properties, globals: globals, userId:userId});
+});
+
+router.post('/unsubscribe', function(req, res, next) {
+    res.redirect(301, '/parents');
+});
+
 module.exports = router;
