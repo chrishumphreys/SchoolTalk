@@ -277,7 +277,7 @@
                         <td>
                             <h3>Hi {{name}},</h3>
                             <p class="lead">{{st.email.para1}}</p>
-                            <p>{{st.email.para2}}</p>
+                            <p>{{st.email.para2}} {{classGroupName}} {{st.email.para3}} {{teacherName}}</p>
                             <!-- Callout Panel -->
                             <div class="callout">
                                 <strong>{{question}}</strong>
@@ -286,16 +286,15 @@
                                 <p>{{st.email.hints}}</p>
                                 <ul class="callout">
                                 {{#hints}}
-                                    <l>{{.}}</l>
+                                    <li>{{.}}</li>
                                 {{/hints}}
                                 </ul>
                                 <br/>
-                                <br/>
                                 <p>{{st.email.references}}</p>
                                 <ul>
-                                {{#references}}
-                                    <a href="#">{{.}}</a>
-                                {{/references}}
+                                {{#links}}
+                                    <li><a href="#">{{.}}</a></li>
+                                {{/links}}
                                 </ul>
                             </div><!-- /Callout Panel -->
 

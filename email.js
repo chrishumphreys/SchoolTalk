@@ -8,19 +8,19 @@ var  properties = require('./properties/email.json');
 
 module.exports = {
 
-
-    "sendEmail" : function(emailData) {
-
-
+    "sendEmail" : function(emailData, debugSentEmailCallback) {
         var data = {
             subject: properties.email.subject,
             from: properties.email.from,
-            to : "chris@schooltalk.org.uk",
-            name : "Test user",
+            to : emailData.to,
+            name : emailData.name,
             question : emailData.question,
             hints : emailData.hints,
-            references : emailData.links,
-            text : "test test",
+            links : emailData.links,
+            teacherName : emailData.teacherName,
+            classGroupName : emailData.classGroupName,
+
+            text : "test test",  //TODO fix me
             st : properties
         };
 
@@ -30,9 +30,9 @@ module.exports = {
         fs.readFile(html_email, 'utf-8', function(error, source){
             var template = handlebars.compile(source);
             var html = template(data);
-            console.log("************************ sending email ***********************")
+//            console.log("************************ sending email ***********************")
             //console.log(html);
-            console.log("**************************************************************")
+//            console.log("**************************************************************")
             data.html = html;
 
             var transporter = nodemailer.createTransport({
@@ -61,6 +61,8 @@ module.exports = {
                 console.log('Message sent: %s', info.messageId);
                 // Preview only available when sending through an Ethereal account
                 console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+                debugSentEmailCallback(info.messageId, nodemailer.getTestMessageUrl(info));
             };
 
             transporter.sendMail(mailOptions, callback);

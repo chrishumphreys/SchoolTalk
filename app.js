@@ -13,6 +13,7 @@ var teachers = require('./routes/teachers');
 var about = require('./routes/about');
 var faqs = require('./routes/faqs');
 var privacy = require('./routes/privacy');
+var debugSentEmail = require('./routes/debug-sent-emails');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use('/teachers', teachers);
 app.use('/about', about);
 app.use('/faqs', faqs);
 app.use('/privacy', privacy);
+app.use('/debug-emails', debugSentEmail);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

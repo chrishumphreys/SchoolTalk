@@ -87,6 +87,12 @@ module.exports = {
         }
     ],
 
+    sentEmails : [
+        {
+            messageId : '123',
+            previewUrl : 'https://ethereal.email/message/WeRDtdAsZggwkYhdWesrfw5TyAfEErkDAAAAFiHS.9KUEmxrRLsRKFmX1Dc'
+        }
+    ],
 
     getAllSchools : function() {
         return this.allSchools;
@@ -149,20 +155,70 @@ module.exports = {
 
     submitQuestion : function(userId, classId, question) {
         var classToSend = this.findClassForTeacher(userId, classId);
-        if (classToSend != null) {
-            classToSend.questions.push(question);
-            //TODO split hints and links on newlines to array
-            console.log(question);
+        var teacher = this.findTeacherByUserId(userId);
 
-            console.log(question);
-            if (process.env.SEND_EMAIL == 'true') {
-                console.log('Sending email...');
-                emailService.sendEmail(question);
-            } else {
-                console.log('Skipping email as disabled by env param: ', process.env.SEND_EMAIL);
+        if (classToSend !== null && teacher !== null) {
+            var questionData = {
+                question : question.question,
+                hints : [],
+                links : []
+            };
+            if (question.hints != null) {
+                var hints = question.hints.split("\r\n");
+                for(var i = 0; i < hints.length; i++ ) {
+                    if (hints[i] !== null && hints[i] != '') questionData.hints.push(hints[i]);
+                }
+            }
+            if (question.links != null) {
+                var links = question.links.split("\r\n");
+                for(var i = 0; i < links.length; i++ ) {
+                    if (links[i] !== null && links[i] != '') questionData.links.push(hints[i]);
+                }
             }
 
+            classToSend.questions.push(questionData);
+            console.log("Question data: " + questionData);
+
+            this.sendQuestionEmails(questionData, classToSend, teacher)
         }
+    },
+
+    sendQuestionEmails : function(questionData, classToSend, teacher) {
+        if (process.env.SEND_EMAIL == 'true') {
+            //TODO loop over all subscribed...
+
+            console.log('Sending email...');
+            var emailData = {
+                question : questionData.question,
+                hints : questionData.hints,
+                links : questionData.links,
+
+                to : "chris@schooltalk.org.uk",
+                name : "Test user",
+                classGroupName : classToSend.className,
+                teacherName :teacher.name
+            };
+
+            console.log(emailData);
+
+            emailService.sendEmail(emailData,this.handleEtherealMailSendCallback(this.getAllSentEmails()));
+
+        } else {
+            console.log('Skipping email as disabled by env param: ', process.env.SEND_EMAIL);
+        }
+    },
+
+    handleEtherealMailSendCallback : function(sentEmailList) {
+        return function(messageId, previewUrl) {
+            sentEmailList.push({
+               messageId : messageId,
+               previewUrl : previewUrl
+           });
+        };
+    },
+
+    getAllSentEmails : function() {
+        return this.sentEmails;
     }
 
 };
