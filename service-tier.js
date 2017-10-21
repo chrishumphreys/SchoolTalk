@@ -88,10 +88,6 @@ module.exports = {
     ],
 
     sentEmails : [
-        {
-            messageId : '123',
-            previewUrl : 'https://ethereal.email/message/WeRDtdAsZggwkYhdWesrfw5TyAfEErkDAAAAFiHS.9KUEmxrRLsRKFmX1Dc'
-        }
     ],
 
     getAllSchools : function() {
