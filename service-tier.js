@@ -172,7 +172,7 @@ module.exports = {
             if (question.links != null) {
                 var links = question.links.split("\r\n");
                 for(var i = 0; i < links.length; i++ ) {
-                    if (links[i] !== null && links[i] != '') questionData.links.push(hints[i]);
+                    if (links[i] !== null && links[i] != '') questionData.links.push(links[i]);
                 }
             }
 
