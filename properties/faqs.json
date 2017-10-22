@@ -2,7 +2,7 @@
     "faqs" : {
         "page_title" : "Frequently asked questions",
         "parents" : {
-            "section_title" : "For parents:",
+            "section_title" : "Parents:",
             "questions" : {
                 "1" : {
                     "question" : "I signed up but I'm not receiving any questions.",
@@ -40,7 +40,7 @@
             }
         },
         "teachers" : {
-            "section_title" : "For teachers:",
+            "section_title" : "Schools and teachers:",
             "questions" : {
                 "1" : {
                     "question" : "How can I use SchoolTalk in my school?",
