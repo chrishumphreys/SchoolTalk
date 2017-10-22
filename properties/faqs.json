@@ -6,28 +6,36 @@
             "questions" : {
                 "1" : {
                     "question" : "I signed up but I'm not receiving any questions.",
-                    "answer" : ""
+                    "answer" : "You’ll receive questions as soon as your child’s teacher adds them.  How many questions they set, and how often, is up to the teacher, so they may not have set any for your child’s class since you signed up.  If you want to double check that you’ve signed up to the right school and class, please email us at support@schooltalk.org.uk or use our contact page."
                 },
                 "2" : {
 
                     "question" : "How do I provide feedback on how to improve SchoolTalk?",
-                    "answer" : ""
+                    "answer" : "We’d really appreciate any comments or suggestions you have about SchoolTalk, especially while we’re in our trial phase.  Please email us at support@schooltalk.org.uk or use our contact page."
                 },
                 "3" : {
                     "question" : "How do I stop receiving questions?",
-                    "answer" : ""
+                    "answer" : "Please email us at support@schooltalk.org.uk from the email address you used to sign up, and put “Unsubscribe” in the subject line, or you can or use our contact page. We’ll remove all your details from our records and you’ll no longer receive questions from schools or classes/groups you’ve signed up for."
                 },
                 "4" : {
                     "question" : "What sorts of questions will I receive?",
-                    "answer" : ""
+                    "answer" : "Your child’s teacher will suggest the questions so it is up to them.  Examples of questions sent using SchoolTalk are “How many continents are there?” and “What are the names of the primary colours?”  The teacher can include the answer and some keywords to help your conversation, like “Seven continents: Asia, Africa, North America, South America, Antarctica, Europe, and Australia” and “Red, blue and yellow.”"
                 },
                 "5" : {
                     "question" : "What if I don't know anything about the subject?",
-                    "answer" : ""
+                    "answer" : "Teachers can include some keywords with the questions they suggest, to give you an idea of the kind of things your child might talk about and help your conversation along. The teacher can even include a weblink so that you can find out more about the subject yourself."
                 },
                 "6" : {
                     "question" : "Do I have to do this?",
-                    "answer" : "No! This is entirely your choice. The school and teachers will not know who has subscribed or who is taking part. SchoolTalk wants to help you by giving you information, not tell you what to do."
+                    "answer" : "No, it’s entirely up to you. We won’t let the school or teachers know which parents have signed up and which haven’t.  SchoolTalk is here to help you by giving you information, not tell you what to do."
+                },
+                "7" : {
+                    "question" : "Does my child’s school or teacher know whether I’ve subscribed?",
+                    "answer" : "No. We won’t let the school or teachers know which parents have signed up and which haven’t."
+                },
+                "8" : {
+                    "question" : "How is SchoolTalk funded?",
+                    "answer" : "We work on SchoolTalk in our spare time because it’s an idea we really believe in. It doesn’t cost much to run so we cover those costs ourselves. Once we’ve completed our trial and expand the service further, we’ll look again at funding but you can be sure we’ll never fund the service by selling any parent, teacher or school’s details."
                 }
             }
         },
@@ -36,7 +44,7 @@
             "questions" : {
                 "1" : {
                     "question" : "How can I use SchoolTalk in my school?",
-                    "answer" : ""
+                    "answer" : "It’s really easy to sign up.  Please get in touch using our contact page."
                 }
             }
         }
