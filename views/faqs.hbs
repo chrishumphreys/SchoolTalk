@@ -1,45 +1,82 @@
-<div class="container">
+<div class="container cf">
+    <h1>"st.faqs.page_title"</h1>
 
-    <div class="image-text cf">
-        <div class="image-text__image-wrapper">
-            <img class="image-text__image-wrapper__image" src="/images/parents-smaller.jpg">
-        </div>
-        <div class="image-text__text">
-            <h1>{{st.faqs.page_title}}</h1>
-        </div>
-    </div>
+    <aside>
+        <ul class="faqs-list">
+            <li><a class="faqs-list__nav-link" href="#question1">{{st.faqs.parents.questions.1.question}}</a></li>
+            <li><a class="faqs-list__nav-link" href="#question2">{{st.faqs.parents.questions.2.question}}</a></li>
+            <li><a class="faqs-list__nav-link" href="#question3">{{st.faqs.parents.questions.3.question}}</a></li>
+            <li><a class="faqs-list__nav-link" href="#question4">{{st.faqs.parents.questions.4.question}}</a></li>
+            <li><a class="faqs-list__nav-link" href="#question5">{{st.faqs.parents.questions.5.question}}</a></li>
+            <li><a class="faqs-list__nav-link" href="#question6">{{st.faqs.parents.questions.6.question}}</a></li>
+            <li><a class="faqs-list__nav-link" href="#question7">{{st.faqs.parents.questions.7.question}}</a></li>
+            <li><a class="faqs-list__nav-link" href="#question8">{{st.faqs.parents.questions.8.question}}</a></li>
+            <li><a class="faqs-list__nav-link" href="#question9">{{st.faqs.teachers.questions.1.question}}</a></li>
+        </ul>
+    </aside>
+    
+    
+    <div class="content-with-aside cf">
+        <section>
+            <h2 class="section-heading">{{st.faqs.parents.section_title}}</h2>
 
+            <ul class="faqs-list">
+                <li>
+                    <h3 id="question1">{{st.faqs.parents.questions.1.question}}</h3>
+                    <p>{{st.faqs.parents.1.answer}}</p>
+                    <a href="#" class="scroll-back-top">Back to top</a>
+                </li>
 
-        <div>
+                <li>
+                    <h3 id="question2">{{st.faqs.parents.questions.2.question}}</h3>
+                    <p>{{st.faqs.parents.2.answer}}</p>
+                    <a href="#" class="scroll-back-top">Back to top</a>
+                </li>
 
-            <h2>{{st.faqs.parents.section_title}}</h2>
-
-            <ul>
-
-                <li>{{st.faqs.parents.questions.1.question}}</li>
-
-                <li>{{st.faqs.parents.questions.2.question}}</li>
-
-                <li>{{st.faqs.parents.questions.3.question}}</li>
-
-                <li>{{st.faqs.parents.questions.4.question}}</li>
-
-                <li>{{st.faqs.parents.questions.5.question}}</li>
-
-                <li>{{st.faqs.parents.questions.6.question}}
-                    <ul>
-                        <li>{{st.faqs.parents.questions.6.answer}}</li>
-                    </ul>
+                <li>
+                    <h3 id="question3">{{st.faqs.parents.questions.3.question}}</h3>
+                    <p>{{st.faqs.parents.3.answer}}</p>
+                    <a href="#" class="scroll-back-top">Back to top</a>
+                </li>
+                <li>
+                    <h3 id="question4">{{st.faqs.parents.questions.4.question}}</h3>
+                    <p>{{st.faqs.parents.4.answer}}</p>
+                    <a href="#" class="scroll-back-top">Back to top</a>
+                </li>
+                <li>
+                    <h3 id="question5">{{st.faqs.parents.questions.5.question}}</h3>
+                    <p>{{st.faqs.parents.5.answer}}</p>
+                    <a href="#" class="scroll-back-top">Back to top</a>
+                </li>
+                <li>
+                   <h3 id="question3">{{st.faqs.parents.questions.6.question}}</h3>
+                    <p>{{st.faqs.parents.6.answer}}</p>
+                    <a href="#" class="scroll-back-top">Back to top</a>
+                </li>
+                 <li>
+                   <h3 id="question7">{{st.faqs.parents.questions.7.question}}</h3>
+                    <p>{{st.faqs.parents.7.answer}}</p>
+                    <a href="#" class="scroll-back-top">Back to top</a>
+                </li>
+                 <li>
+                   <h3 id="question8">{{st.faqs.parents.questions.8.question}}</h3>
+                    <p>{{st.faqs.parents.8.answer}}</p>
+                    <a href="#" class="scroll-back-top">Back to top</a>
                 </li>
             </ul>
-
-            <h2>{{st.faqs.teachers.section_title}}</h2>
-
-            <ul>
-
-                <li>{{st.faqs.teachers.questions.1.question}}</li>
-
+        </section>
+        
+        <section>
+            <h2 class="section-heading">{{st.faqs.teachers.section_title}}</h2>
+            <ul class="faqs-list">
+                <li>
+                    <h3 id="question9">{{st.faqs.teachers.questions.1.question}}</h3>
+                    <p>{{st.faqs.teachers.1.answer}}</p>
+                    <a href="#" class="scroll-back-top">Back to top</a>
+                </li>
             </ul>
-
-        </div>
+                   
+        </section>
+        <a href="#" class="scroll-back-top scroll-back-top--desktop">Back to top</a>
+    </div>
 </div>
