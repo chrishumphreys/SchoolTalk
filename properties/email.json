@@ -1,9 +1,9 @@
 {
     "email" : {
-        "para1" : "A question from SchoolTalk",
+        "para1" : "Here’s a new question from SchoolTalk for you.",
         "para2" : "For ",
         "para3" : " with ",
-        "hints" : "Hints:",
+        "hints" : "Answer, keywords and facts:",
         "references" : "For more information:",
         "from" : "contact@schooltalk.org.uk",
         "subject" : "Question email from SchoolTalk.org.uk"

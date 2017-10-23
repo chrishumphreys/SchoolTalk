@@ -69,8 +69,14 @@ router.post('/send-question', function(req, res, next) {
         } else {
             var classToSendTo = req.body.classId;
             console.log("send question", classToSendTo);
+
+            var question = req.body.question;
+            if (!question.endsWith('?')) {
+                question = question + '?';
+            }
+
             serviceTier.submitQuestion(userId, classToSendTo, {
-                question : req.body.question,
+                question : question,
                 hints : req.body.hints,
                 links : req.body.references
             });

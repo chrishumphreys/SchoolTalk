@@ -67,6 +67,12 @@ module.exports = {
                             question : 'How many continents are there?',
                             hints : [ '7', "Asia, Africa, North America, South America, Antarctica, Europe, and Australia"],
                             links : ['https://en.wikipedia.org/wiki/Continent']
+                        },
+                        {
+                            questionId : 2,
+                            question : 'What was Robert Stephenson famous for?',
+                            hints : [ 'Stephenson\'s Rocket. Early steam locomotive, 1829', "Ran between Liverpool and Manchester"],
+                            links : ['http://www.bbc.co.uk/history/british/victorians/launch_ani_rocket.shtml']
                         }
                     ]
                 },
@@ -80,7 +86,7 @@ module.exports = {
                         {
                             questionId : 1,
                             question : 'Name some primary colours',
-                            hints : [ "red", "blue", "green"],
+                            hints : [ "red", "blue", "yello"],
                             links : []
                         }
                     ]
