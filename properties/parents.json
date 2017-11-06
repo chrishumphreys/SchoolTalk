@@ -1,8 +1,8 @@
 {
     "parents" : {
         "page_title" : "Welcome parents",
-        "intro1" : "\"What did you do at school today?\"",
-        "intro2" : "\"Nothing.\"",
+        "intro1" : "- What did you do at school today?",
+        "intro2" : "- Nothing.",
         "intro3" : "Sound familiar?  You need SchoolTalk!",
 
         "what_is" : {
