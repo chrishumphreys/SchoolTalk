@@ -1,14 +1,16 @@
 <div class="container cf">
     <h1>Please select your child's class/group</h1>
 
-    {{#each classes}}
-    <div class="card border-success mb-3" style="width: 20rem;">
-        <div class="card-body">
-            <h4 class="card-title">{{name}}</h4>
-            <p class="card-text text-center">{{description}}</p>
-            <a href="/parents/schools/{{schoolId}}/classes/{{classId}}/subscribe" class="btn btn-primary">Subscribe to this class</a>
+    <div class="square-list">
+        {{#each classes}}
+        <div class="square">
+            <h2 class="square__heading">{{name}}</h2>
+            <p class="square__body">{{description}}</p>
+            <div class="square__link">
+                <a href="/parents/schools/{{schoolId}}/classes/{{classId}}/subscribe">Subscribe</a>
+            </div>
         </div>
+        {{/each}}
     </div>
-    {{/each}}
 
 </div>
